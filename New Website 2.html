@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher's Page - Senior High School</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("C:/Users/ephrem cubita/Downloads/372292278_591502496531108_8598621385073416859_n.jpg");
+            margin: 0;
+            padding: 0;
+            background-color: Lime;
+            color: Black;
+        }
+
+        .container {
+            width: 80%;
+            margin: 15px auto;
+            padding: 20px;
+            height: 80%;
+        }
+
+        header {
+            background-color: lime;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        header p {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            background-color: Lime;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 40px 0;
+            background-color: #fff;
+            margin: 20px 0;
+        }
+
+        h2 {
+            color: #4CAF50;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 0px;
+            background-color: Lime;
+            color: Black;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Logo image styling */
+        .image-btn {
+            max-width: 100px; /* Set a reasonable max-width */
+            height: auto;
+            margin: 10px 0;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Teacher photo image */
+        .teacher-photo {
+            max-width: 300px;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+
+        /* Subject Images */
+        .subject-image {
+            max-width: 100px; /* Set a reasonable max-width for the subject images */
+            height: auto;
+            margin: 10px;
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <img src="C:\Users\ephrem cubita\Downloads\d3ab0c78-b3fc-45cf-944a-50dec7fb9ce1-removebg-preview (1).png" class="image-btn" alt="School Logo">
+            <h1>Welcome to the Senior High School at Virginia Ramirez Cruz National High School</h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            
+            <li><a href="#subjects">Subjects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+  
+
+    <section id="subjects">
+        <div class="container">
+            <h2>Subjects</h2>
+            <ul>
+                <li>Accountancy, Business, and Management (ABM) – Para sa mga mag-aaral na interesado sa negosyo, accounting, at pamamahala.</li> <img src="C:\Users\ephrem cubita\Downloads\472801350_1117071579630083_3422526020899104788_n.png" class="subject-image" alt="ABM Image"></li>
+                <li>Science, Technology, Engineering, and Mathematics (STEM) – Para sa mga mag-aaral na nais mag-focus sa agham, teknolohiya, engineering, at matematika.</li> <img src="C:\Users\ephrem cubita\Downloads\472801350_1117071579630083_3422526020899104788_n (4).png" class="subject-image" alt="STEM Image"></li>
+                <li>Humanities and Social Sciences (HUMSS) – Para sa mga mag-aaral na nais pumasok sa mga kursong may kinalaman sa mga sining, agham panlipunan, at mga komunikasyon.</li> <img src="C:\Users\ephrem cubita\Downloads\472801350_1117071579630083_3422526020899104788_n (3).png" class="subject-image" alt="HUMSS Image"></li>
+                <li>General Academic Strand (GAS) – Para sa mga mag-aaral na hindi pa tiyak sa kanilang kurso sa kolehiyo at nais magkaroon ng mas malawak na kaalaman sa iba’t ibang disiplina.</li> <img src="C:\Users\ephrem cubita\Downloads\472801350_1117071579630083_3422526020899104788_n (2).png" class="subject-image" alt="GAS Image"></li>
+                <li>Home Economics (HE) – Nakatuon sa mga kasanayan sa pagluluto, pananahi, beauty care, at iba pang serbisyo sa loob ng bahay.</li> <img src="C:\Users\ephrem cubita\Downloads\472801350_1117071579630083_3422526020899104788_n (1).png" class="subject-image" alt="HE Image"></li>
+                <li>Information and Communication Technology (ICT) – Para sa mga mag-aaral na nais matuto tungkol sa programming, web development, at iba pang aspeto ng teknolohiya at komunikasyon.</li> <img src="C:\Users\ephrem cubita\Downloads\473536094_475047438993235_4029967520181536190_n.jpg" class="subject-image" alt="ICT Image"></li>
+            </ul>
+        </div>
+    </section>
+
+ <section id="contact">
+    <div class="container">
+        <h2>Contact</h2>
+        <p>Email: nofearictzuckerberg@gmail.com</p>
+        <!-- Next Button to open a new tab -->
+        <button onclick="openNextTab()" class="next-button">Go to Next Page</button>
+    </div>
+</section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Senior High School - Online Enrollment System</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+<script>
+    function openNextTab() {
+        window.open("Princess.html"); // Replace with your actual URL
+    }
+</script>
+
+

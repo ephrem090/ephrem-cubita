@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Enrollment Form</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+			background-image: url('https://cdn.vectorstock.com/i/500p/82/14/green-background-vector-15738214.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            flex-direction: column;
+			hieght: 2500px;
+			width: 1500px;
+			margin-top: center;
+		    position: absolute;
+			
+        }
+
+        h1 {
+            font-size: 50px;
+            font-weight: bold;
+            text-align: center;
+            color: Black;
+            text-transform: uppercase;
+            background: linear-gradient(45deg, #ff6347, #ff1493);
+            webkit-background-clip: text;
+            background-clip: text;
+            letter-spacing: 3px;
+            animation: glow 1.5s ease-in-out infinite alternate;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+			hieght: 2000px;
+			width: 1000px;
+			text-align: center;
+        }
+
+
+        h2 {
+            font-size: 20px;
+            font-weight: 300;
+            text-align: center;
+            color: Black;
+            letter-spacing: 1px;
+            margin-top: 20px;
+        }
+
+        .button {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            text-align: center;
+            background-color: black;
+            padding: 15px;
+            font-size: 18px;
+            color: white;
+            font-weight: bold;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: white;
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.5), 0 0 15px rgba(255, 255, 255, 0.5);
+            }
+            100% {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1), 0 0 50px rgba(255, 255, 255, 1);
+            }
+        }
+
+        .form-container {
+            display: none;
+            max-width: 900px;
+            width: 100%;
+            background-color: Green;
+            padding: 25px 30px;
+            border-radius: 5px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+            margin-top: 30px;
+            overflow-x: auto;
+        }
+
+        .form-step {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-section {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .form-section label {
+            font-weight: 600;
+            font-size: 18px;
+            align-self: center;
+        }
+
+        .form-section input, .form-section select, .form-section textarea {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .meaning {
+            font-size: 16px;
+            color: White;
+            margin-top: 20px;
+            font-weight: 400;
+        }
+
+        .success-message {
+            display: none;
+            color: green;
+			background-color: Green;
+            font-weight: bold;
+            margin-top: 20px;
+			background-color: Green; 
+			
+       }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 5px;
+			height: 30px;
+			color: Black;
+			padding: 30px;
+        }
+
+        .nav-buttons button {
+            padding: 30px 20px;
+            font-size: 15px;
+            background-color: White;
+            color: Black;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .nav-buttons button:hover {
+            background-color: white;
+        }
+
+        .form-container .step {
+            text-align: center;
+            font-size: 16px;
+            margin-bottom: 20px;
+			background-color: Green;
+        }
+
+        .header {
+            background-color: Green;
+            color: green;
+            padding: 10px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+		
+		.content-box {
+		    background-color: rgba(255, 255, 255, 0.8);
+            color: green;
+            padding: 20px;
+            width: 95%;
+            border: 5px solid black;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+		}
+		
+		h3 {
+		    font-size: 50px;
+            font-weight: bold;
+            text-align: center;
+            color: black;
+            text-transform: uppercase;
+	    }
+		
+		.image-btn {
+            display: block;
+            margin: 10px;
+            max-width: 50%;
+            height: auto;
+		}
+		
+		/* Center the images within the content box */
+        .image-btn {
+            max-width: 45%;
+            height: auto;
+            margin: 10px;
+	    }
+			
+		.home-container {
+            display: flex;
+            justify-content: center;   /* Horizontally center */
+            align-items: center;       /* Vertically center */
+            height: 100vh;             /* Ensure it takes up the full height */
+            flex-direction: column;    /* Align children (images and text) vertically */   
+        }
+    </style>
+</head>
+<body>
+
+    <div class="home-container">
+	<img src="C:\Users\ephrem cubita\Downloads\d3ab0c78-b3fc-45cf-944a-50dec7fb9ce1-removebg-preview (1).png" class="image-btn" style="height: 10%; width: 10% align="center";>
+	    <h1>Virginia Ramirez Cruz National High School</h1>
+		<h1>Siling Bata, Pandi, Bulacan</h1>
+        <h1>WELCOME TO OUR ONLINE ENROLLMENT FORM</h1>
+        <h2>Click below to get started</h2>
+        <a href="javascript:void(0);" class="button" id="register-btn">Next</a>
+    </div>
+
+   <script>
+    const registerBtn = document.getElementById('register-btn');
+
+    // Add event listener to open the next tab
+    registerBtn.addEventListener('click', () => {
+        window.open('New Website 2.html', '_blank'); // Replace 'newpage.html' with the desired URL
+    });
+</script>
+
+
+</body>
+</html>

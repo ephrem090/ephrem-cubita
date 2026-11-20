@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Enrollment Form</title>
+    <style>
+        /* Styling for the page */
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://cdn.vectorstock.com/i/500p/82/14/green-background-vector-15738214.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            flex-direction: column;
+            height: 2500px;
+            width: 1500px;
+            margin-top: center;
+            position: absolute;
+        }
+
+        .home-container {
+            text-align: center;
+            padding: 50px;
+            background-color: #00FF00;
+            color: Black;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: Black;
+            color: White;
+            text-decoration: none;
+            border-radius: 5px;
+            border: 1px solid #4CAF50;
+        }
+
+        .button:hover {
+            background-color: Black;
+            color: white;
+        }
+
+        .form-container {
+            display: none;
+            background-color: Lime;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .form-section {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 16px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], input[type="date"], input[type="email"], input[type="tel"], input[type="number"], select, input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: Black;
+        }
+
+        .nav-buttons {
+            text-align: center;
+        }
+
+        /* Success message styling */
+        .success-message {
+            display: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            margin: 20px;
+            border-radius: 5px;
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Home Container with Registration Button -->
+    <div class="home-container">
+        <img src="C:\Users\ephrem cubita\Downloads\d3ab0c78-b3fc-45cf-944a-50dec7fb9ce1-removebg-preview (1).png" class="image-btn" style="height: 10%; width: 10%; text-align: center;">
+        <h1>Virginia Ramirez Cruz National High School</h1>
+        <h1>Siling Bata, Pandi, Bulacan</h1>
+        <h1>WELCOME TO OUR ONLINE ENROLLMENT FORM</h1>
+        <a href="javascript:void(0);" class="button" id="register-btn">REGISTER</a>
+    </div>
+
+    <!-- Form Container with Enrollment Form -->
+    <div class="form-container" id="form-container">
+        <form id="enrollment-form">
+            <h3>Fill up Personal Information</h3>
+
+            <!-- Form Fields -->
+            <div class="form-section">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+            <div class="form-section">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="form-section">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="form-section">
+                <label for="lrn">LRN:</label>
+                <input type="text" id="lrn" name="lrn" required>
+            </div>
+            <div class="form-section">
+                <label for="house-no">House No.:</label>
+                <input type="text" id="house-no" name="house-no" required>
+            </div>
+            <div class="form-section">
+                <label for="street">Street Name:</label>
+                <input type="text" id="street" name="street" required>
+            </div>
+            <div class="form-section">
+                <label for="barangay">Barangay:</label>
+                <input type="text" id="barangay" name="barangay" required>
+            </div>
+            <div class="form-section">
+                <label for="municipality">Municipality/City:</label>
+                <input type="text" id="municipality" name="municipality" required>
+            </div>
+            <div class="form-section">
+                <label for="province">Province:</label>
+                <input type="text" id="province" name="province" required>
+            </div>
+            <div class="form-section">
+                <label for="guardian-name">Guardian Name:</label>
+                <input type="text" id="guardian-name" name="guardian-name" required>
+            </div>
+            <div class="form-section">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-section">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-section">
+                <label for="parent-phone">Parent's Phone Number:</label>
+                <input type="tel" id="parent-phone" name="parent-phone" required>
+            </div>
+
+            <!-- Grade Level Selection -->
+            <h3>Select Your Grade Level</h3>
+            <div class="form-section">
+                <label for="grade-level">Select Your Grade Level:</label>
+                <select id="grade-level" name="grade-level" required>
+                    <option value="grade-11">Grade 11</option>
+                    <option value="grade-12">Grade 12</option>
+                </select>
+            </div>
+
+            <!-- File Upload Section -->
+            <h3>Upload Your Birth Certificate & Grades Card</h3>
+            <div class="form-section">
+                <label for="birth-certificate">Choose Birth Certificate to Upload:</label>
+                <input type="file" id="birth-certificate" name="birth-certificate" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx" required>
+            </div>
+            <div class="form-section">
+                <label for="grade-card">Choose your Grade Card:</label>
+                <input type="file" id="grade-card" name="grade-card" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx" required>
+            </div>
+
+            <!-- Strand Selection -->
+            <h3>Select Your Favorite Strand</h3>
+            <div class="form-section">
+                <label for="strand">Select Your Strand:</label>
+                <select id="strand" name="strand" required>
+                    <option value="stem">STEM (Science, Technology, Engineering, Mathematics)</option>
+                    <option value="abm">ABM (Accountancy, Business, and Management)</option>
+                    <option value="humss">HUMSS (Humanities and Social Sciences)</option>
+                    <option value="gas">GAS (General Academic Strand)</option>
+                    <option value="tvl">TVL (Technical-Vocational-Livelihood)</option>
+                    <option value="ict">ICT (Information and Communication Technology)</option>
+                    <option value="he">HE (Home Economics)</option>
+                </select>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="nav-buttons">
+                <button type="button" id="submit-btn">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Success Message -->
+    <div class="success-message" id="success-message">
+        <p>Form Submitted Successfully!</p>
+    </div>
+
+    <script>
+        const registerBtn = document.getElementById('register-btn');
+        const formContainer = document.getElementById('form-container');
+        const submitBtn = document.getElementById('submit-btn');
+        const form = document.getElementById('enrollment-form');
+        const successMessage = document.getElementById('success-message');
+
+        // Show the form when the "REGISTER" button is clicked
+        registerBtn.addEventListener('click', () => {
+            formContainer.style.display = 'block';
+        });
+
+        // Handle form submission
+        submitBtn.addEventListener('click', () => {
+            const formData = {
+                fullname: document.getElementById('fullname').value,
+                dob: document.getElementById('dob').value,
+                age: document.getElementById('age').value,
+                lrn: document.getElementById('lrn').value,
+                street: document.getElementById('street').value,
+                barangay: document.getElementById('barangay').value,
+                municipality: document.getElementById('municipality').value,
+                province: document.getElementById('province').value,
+                guardianName: document.getElementById('guardian-name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                parentPhone: document.getElementById('parent-phone').value,
+                strand: document.getElementById('strand').value,
+                gradeLevel: document.getElementById('grade-level').value
+            };
+
+            // Store the form data in localStorage
+            localStorage.setItem('formData', JSON.stringify(formData));
+
+            // Show success message
+            successMessage.style.display = 'block';
+
+            // Hide form and "REGISTER" button
+            formContainer.style.display = 'none';
+            registerBtn.style.display = 'none';
+
+            // Reset the form
+            form.reset();
+
+            // Redirect after a short delay
+            setTimeout(() => {
+                window.location.href = "Ephrem_enrollment_form.html";  // Change this to your actual next page URL
+            }, 3000); // Redirect after 3 seconds
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
